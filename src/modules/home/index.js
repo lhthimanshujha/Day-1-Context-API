@@ -1,8 +1,15 @@
 import React from "react";
-import Content from "./content";
+import MyComponent from "../MyComponent/MyComponent";
+import { ThemeProvider } from "./ThemeContext";
 
-const Home = () => {
-  return <Content />;
+const App = () => {
+  return (
+    <ThemeProvider>
+      <div>
+        <MyComponent />
+      </div>
+    </ThemeProvider>
+  );
 };
 
-export default Home;
+export default App;
